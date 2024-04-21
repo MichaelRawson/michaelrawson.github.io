@@ -27,13 +27,13 @@ body {
 	padding: 10px;
 	margin: 40px auto;
 
-	color: #444;
-	background-color: #EEEEEE;
+	color: #111;
+	background-color: #F5F5F5;
 }
 
 ul {
 	margin-top: 1em;
-	margin-left: 2em;
+	margin-left: 1em;
 }
 
 p {
