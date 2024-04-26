@@ -6,7 +6,7 @@ html {
 *, *:before, *:after {
 	box-sizing: inherit;
 }
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, figure {
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
@@ -47,4 +47,16 @@ li {
 hr {
 	margin-top: 2em;
 	margin-bottom: 2em;
+}
+
+figure {
+	margin-bottom: 2em;
+}
+
+figure img {
+	width: 100%;
+}
+
+figcaption {
+	font-size: 8pt;
 }
