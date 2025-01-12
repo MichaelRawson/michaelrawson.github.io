@@ -17,6 +17,18 @@ header, section {
 	padding-bottom: 15pt;
 }
 
+header h1 {
+	text-align: center;
+}
+
+header img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+	border-radius: 50%;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	font-size: 12pt;
@@ -47,16 +59,4 @@ li {
 hr {
 	margin-top: 2em;
 	margin-bottom: 2em;
-}
-
-figure {
-	margin-bottom: 2em;
-}
-
-figure img {
-	width: 100%;
-}
-
-figcaption {
-	font-size: 8pt;
 }
