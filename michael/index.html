@@ -4,22 +4,70 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <title>Michael Rawson</title>
- <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
- <header>
-  <img src="portrait.jpg" alt="headshot" height=170 width=170>
-  <h1>Michael Rawson</h1>
- </header>
- <main>
-  <p>
-  I am a computer scientist at the <a href="https://www.southampton.ac.uk/">University of Southampton</a>, UK.
-I am generally interested in computer reasoning systems, particularly <a href="https://en.wikipedia.org/wiki/Automated_theorem_proving">automatic theorem provers</a>.
+<img src="portrait.jpg" alt="Michael with a taxidermied bear in a museum" height=256 width=256>
+<h1>Michael Rawson</h1>
+I am a computer scientist at the <a href="https://www.southampton.ac.uk/">University of Southampton</a>.
+I keep copies of my papers <a href="papers/">here</a>, a short biography <a href="biography">here</a>, and a CV <a href="CV.pdf">here</a>.
 
-  <p>
-<a href="https://scholar.google.co.uk/citations?user=veUl7JQAAAAJ">Google Scholar</a> is quite good at tracking me, but I also keep a <a href="log">log</a> of my academic activities, including copies of publications.
+<section>
+<h2>Contact</h2>
+E-mail me: michael @ this domain.
+I live <a href="https://osneyisland.org.uk/">near Oxford train station</a>, shout if you are passing!
+</section>
 
-  <p>
-You can contact me via <a href="mailto:michael@rawsons.uk">e-mail</a>.
- </main>
+<section>
+<h2>Research Interests</h2>
+I'm interested in <a href="https://en.wikipedia.org/wiki/Automated_reasoning">automated reasoning</a>, i.e. getting computers to "think" logically.
+This has plenty of applications (including mathematics and software verification), but personally I just think it's neat.
+You might call this "symbolic" or "good old-fashioned" AI &mdash; in contrast to what the press calls "AI" at the minute.
+
+<h3>Vampire</h3>
+I help maintain <a href="https://github.com/vprover/vampire/">Vampire</a>, a world-class fully-automatic theorem prover.
+Read our <a href="papers/CAV-2025.pdf">CAV 2025 survey</a>!
+Vampire is a big beast, applying lots of different strategies to prove many different theorems.
+You can think of it as a machine for deducing consequences very efficiently.
+Vampire is my go-to testbed for trying new ideas and the code is much easier to navigate than it used to be.
+
+<h3>Machine Learning and Automated Reasoning</h3>
+Traditional computer reasoning systems do not learn from their experience as we do.
+Why not?
+I wrote my <a href="papers/phd.pdf">PhD thesis</a> on this topic &mdash; it turns out to be harder than I'd hoped!
+I've done some work on <a href="papers/PAAR-2020-gnn.pdf">representing</a> <a href="papers/AAAI-2025.pdf">logical data</a> for consumption by neural networks and <a href="papers/TABLEAUX-2021-lazy.pdf">guiding</a> <a href="papers/PAAR-2020-reinforcement.pdf">theorem</a> <a href="papers/FroCoS-2019.pdf">provers</a> in various more-or-less straightforward ways.
+This all worked for me to some extent, but what I was missing was scale and persistence: a large team centred around Prague were able to make <a href="https://arxiv.org/abs/2303.06686">enormous progress</a> this way.
+Recently I've been having a re-think about how to achieve the kind of free lunch I'm looking for by <a href="papers/AITP-2024.pdf">changing the rules of the game</a>.
+
+<h3>Applications</h3>
+It's fun to try to apply automated reasoning in new areas, especially where it looks unlikely at first.
+I've been involved with efforts in <a href="papers/SP-2024.pdf">security</a> and <a href="papers/OOPSLA-2025.pdf">game theory</a>, for example.
+
+<p>
+Automated reasoning's biggest customer is still <a href="https://en.wikipedia.org/wiki/Proof_assistant">interactive theorem proving</a>, which is a very natural pairing: automated reasoning fills in the easy parts as users write large computer-checked proofs.
+Unfortunately systems like <a href="https://lean-lang.org/">Lean</a> use complex dependent type theories as their foundation, which are very hard to automate.
+I'd like to see the ITP community return to simpler times and simpler foundations: <a href="https://hol-theorem-prover.org/">the HOL family</a>, <a href="https://en.wikipedia.org/wiki/Mizar_system">Mizar</a> and <a href="https://us.metamath.org/">Metamath</a> are all great.
+<a href="https://www.kdrag.com/">Knuckledragger</a>, <a href="https://naproche.github.io/">Naproche</a>, <a href="https://github.com/epfl-lara/lisa/">LISA</a> and <a href="https://github.com/medovina/natty">Natty</a> are more recent innovations.
+
+<h3>Proof Checking and Transformation</h3>
+Once you have a proof from an automated system, it might be nice to <a href="papers/CADE-2025.pdf">check</a> <a href="https://arxiv.org/abs/2503.15541">it</a> or transform it into a different kind of proof (watch this space).
+This is somehow not yet a solved problem!
+There are both technical problems (how do we do handle e.g. Skolemnisation?) and engineering considerations (who wants to deal with Vampire's hundred-odd existing inferences?).
+
+<h3>Connection Calculi</h3>
+Systems like Vampire reason "forwards" from the input and the negated goal, towards a proof by refutation.
+What if you instead reason "backwards" from the goal towards axioms?
+Connection methods embrace this idea and produce very concise implementations, like <a href="https://leancop.de">leanCoP</a>.
+I've been trying to bring modern automated reasoning techniques like <a href="papers/TABLEAUX-2021-sat.pdf">SAT</a> <a href="papers/TABLEAUX-2025-2.pdf">solving</a>, <a href="papers/TABLEAUX-2025-1.pdf">constraint learning</a>, and <a href="papers/TABLEAUX-2021-lazy.pdf">specialised handling of equality</a> to connection systems.
+I am very grateful to the connection community for being so welcoming!
+
+<h3>Automated Reasoning Oddities</h3>
+I'm usually playing with some strange underhand tricks for automated reasoning, much of it unfinished.
+My current favourite toys are <a href="https://en.wikipedia.org/wiki/Algebraic_logic">algebraic logic</a>, <a href="https://dl.acm.org/doi/10.1145/6012.15399">magic sets</a>, and <a href="https://pure.manchester.ac.uk/ws/portalfiles/portal/114539392/main.pdf">symmetry breaking</a>.
+I'd also love to apply something rogue like a Fourier transform from wider mathematics to automated reasoning, just to freshen things up a bit.
+Write me if you have a wonky idea in this area!
+
+<h3>TPTP</h3>
+I am <em>slowly</em> starting to help <a href="https://www.cs.miami.edu/home/geoff/">Geoff Sutcliffe</a> with the <a href="https://www.tptp.org/">TPTP World</a>, which is "established infrastructure used by the Automated Theorem Proving (ATP) community".
+At some point TPTP stood for "Thousands of Problems for Theorem Provers" - the benchmark set is one part of the wider World.
+</section>
 </body>
